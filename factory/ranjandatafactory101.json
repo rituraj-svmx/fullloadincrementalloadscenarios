@@ -1,0 +1,9 @@
+{
+	"name": "ranjandatafactory101",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8489890e-79a2-4aa0-8558-6cae00873c5d",
+		"tenantId": "202d51f8-5ae2-4d0b-922b-4c6cb1a2fc3f"
+	}
+}

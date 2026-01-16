@@ -1,0 +1,60 @@
+{
+	"name": "AzureSqlTable_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "source_type",
+				"type": "varchar"
+			},
+			{
+				"name": "source_name",
+				"type": "varchar"
+			},
+			{
+				"name": "schema_name",
+				"type": "varchar"
+			},
+			{
+				"name": "table_name",
+				"type": "varchar"
+			},
+			{
+				"name": "file_path",
+				"type": "varchar"
+			},
+			{
+				"name": "file_format",
+				"type": "varchar"
+			},
+			{
+				"name": "load_type",
+				"type": "varchar"
+			},
+			{
+				"name": "watermark_column",
+				"type": "varchar"
+			},
+			{
+				"name": "last_watermark",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "is_active",
+				"type": "bit"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ingestion_control"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

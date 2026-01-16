@@ -1,0 +1,33 @@
+{
+	"name": "csvDelimitedText_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStoragesa_ls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"folder_path": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "sales_20240101.csv",
+				"folderPath": {
+					"value": "@dataset().folder_path",
+					"type": "Expression"
+				},
+				"container": "landing"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
